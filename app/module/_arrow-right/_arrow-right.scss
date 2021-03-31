@@ -1,0 +1,26 @@
+.arrow-right {
+  width: 72px;
+  height: 72px;
+  background: $link;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 57px;
+  right: -6px;
+  transition: all .3s;
+  &:hover {
+    background: $link-hower;
+  }
+  &:active {
+    background: $link-active;
+  }
+  &__angle {
+    width: 13px;
+    height: 13px;
+    border-right: 2px solid $body;
+    border-bottom: 2px solid $body;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-65%, -50%) rotate(-45deg);
+  }
+}

@@ -20,30 +20,43 @@
          -->
 
    <main class="main">
+
     <div class="invite">
-      <div class="container">
-         <div class="invite__inner">
-            <div class="invite__content">
-               <h1 class="invite__title">tea ceremony</h1>
-               <p class="invite__text">PLAN YOUR VISIT</br>TO A
-                  <span>Tea ceremony master class</span>
-               </p>
-               <p class="invite__text--adapt">PLAN YOUR VISIT TO A
-                  <span>Tea ceremony master class</span>
-               </p>
-               <a class="invite__link" href="#">
-                  {% include "app/module/_arrow-right/_arrow-right.njk" %}
-               </a>
+         <div class="container">
+            <div class="invite__inner">
+               <div class="invite__content">
+                  <h1 class="invite__title">tea ceremony</h1>
+                  <p class="invite__text">PLAN YOUR VISIT</br>TO A
+                     <span>Tea ceremony master class</span>
+                  </p>
+                  <p class="invite__text--adapt">PLAN YOUR VISIT TO A
+                     <span>Tea ceremony master class</span>
+                  </p>
+                  <a class="invite__link" href="#">
+                     {% include "app/module/_arrow-right/_arrow-right.njk" %}
+                  </a>
+               </div>
             </div>
          </div>
       </div>
-    </div>
+
+      <sectiom class="catalog">
+         <div class="container">
+            <div class="catalog__inner">
+               <h2 class="catalog__title title">Catalog</h2>
+               {% include "app/module/_product-slider/_product-slider.njk" %}
+               <a class="more-link" href="#">View more</a>
+            </div>
+         </div>
+      </sectiom>
+
+      {% include "app/module/_set/_set.njk" %}
 
    </main>
 
    {% include "app/module/_footer/_footer.njk" %}
 
-   <script>
+   {# <script>
       var mybutton = document.getElementById("up");
       window.onscroll = function() {scrollFunction()};
    
@@ -54,7 +67,7 @@
           mybutton.style.display = "none";
         }
       }
-   </script>
+   </script> #}
    <script src="js/main.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,100 @@
+@import '../module/_product/_product';
+
+.product-slider {
+  display: flex;
+  margin-bottom: 30px;
+  position: relative;
+  .arrow-right {
+    width: 55px;
+    height: 55px;
+  }
+  .slick-btn {
+    outline: none;
+    margin: 0 5px;
+  }
+  .slick-prev {
+    .arrow-right {
+      &__angle {
+        transform: translate(-35%, -50%) rotate(135deg);
+      }
+    }
+  }
+  .slick-disabled {
+    .arrow-right {
+      opacity: 0.8;
+      filter: blur(1px);
+      cursor: default;
+      &:hover {
+        background: $link;
+      }
+    }
+  }
+  .slick-slide {
+    padding: 0 5px;
+  }
+}
+// ---------------------------------------------------1360-----------------------------------------------------
+@media (max-width: 1360px) {
+  .product-slider {
+    margin-bottom: 25px;
+  }
+}
+// ---------------------------------------------------960-----------------------------------------------------
+@media (max-width: 960px) {
+  .product-slider {
+    .slick-slide {
+      padding: 0 10px;
+    }
+  }
+}
+// ---------------------------------------------------860-----------------------------------------------------
+@media (max-width: 860px) {
+  .product-slider {
+    margin-bottom: 20px;
+    .slick-slide {
+      padding: 0 5px;
+    }
+  }
+}
+// ---------------------------------------------------660-----------------------------------------------------
+@media (max-width: 660px) {
+  .product-slider {
+    margin-bottom: 38px;
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -25px;
+      button {
+        font-size: 0;
+        width: 12px;
+        height: 12px;
+        background-color: $link;
+        border-radius: 50%;
+        outline: none;
+        margin: 0 4px;
+        position: relative;
+        &::before {
+          content: '';
+          width: 10px;
+          height: 10px;
+          background-color: #fff;
+          border-radius: 50%;
+          position: absolute;
+          bottom: 1px;
+          right: 1px;
+        }
+      }
+      .slick-active {
+        button {
+          background-color: $link-hover;
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

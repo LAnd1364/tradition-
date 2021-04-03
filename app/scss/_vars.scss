@@ -27,8 +27,13 @@
   font-weight: 700;
 }
 
+@mixin OpenSans-600 {
+    font-family: 'OpenSans-SemiBold', sans-serif;
+    font-weight: 600;
+}
+
 $body: #1a1919;
 $link: #F6D28A;
-$link-hower: #FDCD6D;
+$link-hover: #FDCD6D;
 $link-active: #FFCD69;
 $border: 1px solid #BCBBBB;

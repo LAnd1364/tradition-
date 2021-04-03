@@ -17,24 +17,113 @@ body {
   padding: 0 15px;
   margin: 0 auto;
 }
-.up-wrap {
-  // max-width: 1470px;
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  margin: 0 auto;
+.title {
+  @extend %Montserrat-400;
+  font-size: 45px;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 90px;
 }
-.up {
-  // display: none;
-  // background-color: #fff;
-  // border-radius: 4px;
-  // outline-color: rgba($body, .4);
-  // margin-left: 30px;
-  svg {
-    opacity: 0.4;
+.more-link {
+  display: block;
+  width: fit-content;
+  @extend %OpenSans-400;
+  font-size: 22px;
+  line-height: 1.37;
+  margin: 0 24px 0 auto;
+  position: relative;
+  &:hover::after {
+    transform: rotate(-45deg) translate(2px, 2px);
   }
-  svg:hover {
-    opacity: .55;
+  &::before {
+    content: '';
+    width: 101%;
+    height: 1px;
+    background-color: $body;
+    position: absolute;
+    bottom: 3px;
+    left: -1px;
+  }
+  &::after {
+    content: '';
+    width: 9px;
+    height: 9px;
+    border-right: 2px solid $body;
+    border-bottom: 2px solid $body;
+    position: absolute;
+    transform: rotate(-45deg);
+    position: absolute;
+    bottom: 24%;
+    right: -12%;
+    transition: all .3s;
+  }
+}
+// .up-wrap {
+//   // max-width: 1470px;
+//   position: fixed;
+//   left: 0;
+//   right: 0;
+//   z-index: 1;
+//   margin: 0 auto;
+// }
+// .up {
+//   // display: none;
+//   // background-color: #fff;
+//   // border-radius: 4px;
+//   // outline-color: rgba($body, .4);
+//   // margin-left: 30px;
+//   svg {
+//     opacity: 0.4;
+//   }
+//   svg:hover {
+//     opacity: .55;
+//   }
+// }
+
+// ---------------------------------------------------1360-----------------------------------------------------
+@media (max-width: 1360px) {
+  .title {
+    margin-bottom: 65px;
+  }
+}
+// ---------------------------------------------------1260-----------------------------------------------------
+@media (max-width: 1260px) {
+  .title {
+    font-size: 42px;
+    margin-bottom: 60px;
+  }
+}
+// ---------------------------------------------------1260-----------------------------------------------------
+@media (max-width: 1260px) {
+  .title {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+}
+// ---------------------------------------------------860-----------------------------------------------------
+@media (max-width: 860px) {
+  .title {
+    font-size: 37px;
+    margin-bottom: 32px;
+  }
+}
+// ---------------------------------------------------760-----------------------------------------------------
+@media (max-width: 760px) {
+  .title {
+    margin-bottom: 22px;
+  }
+}
+// ---------------------------------------------------560-----------------------------------------------------
+@media (max-width: 560px) {
+  .title {
+    font-size: 30px;
+    margin-bottom: 14px;
+  }
+}
+// ---------------------------------------------------420-----------------------------------------------------
+@media (max-width: 420px) {
+  .title {
+    font-size: 28px;
+    line-height: 1.1;
   }
 }

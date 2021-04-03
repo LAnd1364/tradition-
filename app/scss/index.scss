@@ -6,6 +6,8 @@
 @import 'media';
 @import '../module/_header/_header';
 @import '../module/_arrow-right/_arrow-right';
+@import '../module/_product-slider/_product-slider';
+@import '../module/_set/_set';
 @import '../module/_footer/_footer';
 
 .invite {
@@ -14,7 +16,6 @@
   background-image: url(../images/invite-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  // background-position: top;
   margin: 0 auto;
   &__inner {
     height: 100%;
@@ -63,6 +64,19 @@
       margin: 15px 0 0 45px;
     }
   }
+  .arrow-right {
+    position: absolute;
+    bottom: 57px;
+    right: -6px;
+  }
+}
+// ---------------------------------------------------catalog-----------------------------------------------------
+.catalog {
+  &__inner {
+    padding: 150px 10px 0;
+    border-left: $border;
+    border-right: $border;
+  }
 }
 // ---------------------------------------------------1360-----------------------------------------------------
 @media (max-width: 1360px) {
@@ -71,6 +85,11 @@
     background-position: 50%;
     &__inner {
       padding: 94px 0 174px 13%;
+    }
+  }
+  .catalog {
+    &__inner {
+      padding: 110px 10px 0;
     }
   }
 }
@@ -119,18 +138,23 @@
     &__content {
       max-width: 332px;
       height: 310px;
-      padding: 47px 41px;
+      padding: 47px 46px 47px 36px;
     }
     &__title {
       font-size: 48px;
     }
     &__text span {
-      margin: 15px 0 0 12px;
+      margin: 15px 0 0 26px;
     }
   }
   .arrow-right {
     width: 58px;
     height: 58px;
+  }
+  .catalog {
+    &__inner {
+      padding: 85px 10px 0;
+    }
   }
 }
 // ---------------------------------------------------960-----------------------------------------------------
@@ -170,11 +194,16 @@
       font-size: 15px;
       margin: 10px 0 0 0;
     }
+    .arrow-right {
+      width: 54px;
+      height: 54px;
+      right: -20px;
+    }
   }
-  .arrow-right {
-    width: 54px;
-    height: 54px;
-    right: -20px;
+  .catalog {
+    &__inner {
+      padding: 55px 10px 0;
+    }
   }
 }
 // ---------------------------------------------------760-----------------------------------------------------
@@ -200,6 +229,12 @@
   .arrow-right {
     bottom: 52px;
   }
+  .catalog {
+    &__inner {
+      padding: 40px 8px 0;
+      border: none;
+    }
+  }
 }
 // ---------------------------------------------------660-----------------------------------------------------
 @media (max-width: 660px) {
@@ -213,6 +248,7 @@
 // ---------------------------------------------------560-----------------------------------------------------
 @media (max-width: 560px) {
   .invite {
+    background-position: 67%;
     &__inner {
       padding: 33px 0 26px 5%;
     }
@@ -225,6 +261,19 @@
     }
     &__title {
       font-size: 35px;
+    }
+  }
+  .catalog {
+    &__inner {
+      padding: 32px 8px 0;
+    }
+  }
+}
+// ---------------------------------------------------420-----------------------------------------------------
+@media (max-width: 420px) {
+  .catalog {
+    &__inner {
+      padding: 25px 8px 0;
     }
   }
 }

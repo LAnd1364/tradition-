@@ -49,5 +49,20 @@ $(function() {
       },
     ]
   });
+  // ----------------------------------------------set-slider------------------------------------------------
+  $('.set-slider__l').slick({
+    asNavFor: '.set-slider__s',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: false,
+    fade: true,
+  });
+  $('.set-slider__s').slick({
+    asNavFor: '.set-slider__l',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+  });
 
 });

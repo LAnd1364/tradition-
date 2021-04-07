@@ -40,7 +40,7 @@
          </div>
       </div>
 
-      <sectiom class="catalog">
+      <sectiom class="catalog" id="catalog">
          <div class="container">
             <div class="catalog__inner">
                <h2 class="catalog__title title">Catalog</h2>
@@ -53,6 +53,77 @@
       {% include "app/module/_set/_set.njk" %}
       {% include "app/module/_blog/_blog.njk" %}
 
+      <section class="reviews" id="reviews">
+         <div class="container">
+            <div class="reviews__inner">
+               <h2 class="reviews__title title">Reviews</h2>
+               <div class="reviews-slider">
+                  <div class="reviews-slider__item">
+                     <a href="#">
+                        <img class="reviews-slider__img" src="images/reviews/ava-1.jpg" alt="reviewier ava">
+                        <span class="reviews-slider__name">Mary</span>
+                        <p class="reviews-slider__text">
+                           Although I'm not a fan of these teas, this one turned out to be delicious! Delicate taste, pleasant smell. Recommend!
+                        </p>
+                     </a>
+                  </div>
+                  <div class="reviews-slider__item">
+                     <a href="#">
+                        <img class="reviews-slider__img" src="images/reviews/ava-2.jpg" alt="reviewier ava">
+                        <span class="reviews-slider__name">Victor</span>
+                        <p class="reviews-slider__text">
+                           Very good tea, especially for beginners. It has an interesting herbal taste and tones well before the working day. 
+                        </p>
+                     </a>
+                  </div>
+                  <div class="reviews-slider__item">
+                     <a href="#">
+                        <img class="reviews-slider__img" src="images/reviews/ava-3.jpg" alt="reviewier ava">
+                        <span class="reviews-slider__name">Den</span>
+                        <p class="reviews-slider__text">
+                           Rich taste. The milky smell envelops)) The leaves are large, fully open.
+                        </p>
+                     </a>
+                  </div>
+                  <div class="reviews-slider__item">
+                     <a href="#">
+                        <img class="reviews-slider__img" src="images/reviews/ava-4.jpg" alt="reviewier ava">
+                        <span class="reviews-slider__name">Nata</span>
+                        <p class="reviews-slider__text">
+                           The aroma is pleasant. The taste is very delicate. For lovers of tartness and saturation is unlikely to be suitable.
+                        </p>
+                     </a>
+                  </div>
+                  <div class="reviews-slider__item">
+                     <a href="#">
+                        <img class="reviews-slider__img" src="images/reviews/ava-1.jpg" alt="reviewier ava">
+                        <span class="reviews-slider__name">Mary</span>
+                        <p class="reviews-slider__text">
+                           Although I'm not a fan of these teas, this one turned out to be delicious! Delicate taste, pleasant smell. Recommend!
+                        </p>
+                     </a>
+                  </div>
+                  <div class="reviews-slider__item">
+                     <a href="#">
+                        <img class="reviews-slider__img" src="images/reviews/ava-2.jpg" alt="reviewier ava">
+                        <span class="reviews-slider__name">Victor</span>
+                        <p class="reviews-slider__text">
+                           Very good tea, especially for beginners. It has an interesting herbal taste and tones well before the working day. 
+                        </p>
+                     </a>
+                  </div>
+               </div>
+               <a class="more-link" href="#">View more</a>
+            </div>
+         </div>
+      </section>
+
+      <section class="shop" id="shop">
+         <div class="container">
+            <h2 class="shop__title title">Shop</h2>
+         </div>
+      </section>
+      
    </main>
 
    {% include "app/module/_footer/_footer.njk" %}

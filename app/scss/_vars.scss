@@ -31,6 +31,9 @@
     font-family: 'OpenSans-SemiBold', sans-serif;
     font-weight: 600;
 }
+@mixin Montserrat-600 {
+    font-weight: 600;
+}
 
 $body: #1a1919;
 $link: #F6D28A;

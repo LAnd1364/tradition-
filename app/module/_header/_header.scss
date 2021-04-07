@@ -28,17 +28,6 @@
       opacity: 1;
     }
   }
-  &__phone {
-    margin-left: 35px;
-    text-decoration: underline;
-    transition: all .3s;
-    &:hover {
-      font-weight: 700;
-    }
-    &:active {
-      text-decoration: none;
-    }
-  }
   &__usernav {
     display: flex;
     justify-content: space-between;
@@ -49,6 +38,17 @@
   .logo {
     width: 151px;
     margin: 0 auto;
+  }
+}
+.phone {
+  margin-left: 35px;
+  text-decoration: underline;
+  transition: all .3s;
+  &:hover {
+    font-weight: 700;
+  }
+  &:active {
+    text-decoration: none;
   }
 }
 .menu {

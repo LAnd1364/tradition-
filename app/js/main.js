@@ -5,6 +5,13 @@ $(function() {
     $('.menu__list').toggleClass('menu__list--active');
     $('.menu__btn-line').toggleClass('menu__btn-line--active');
   });
+  // ----------------------------------------------menu__btn------------------------------------------------
+  $('.menu__item-link, .logo').on('click', function(e) {
+    e.preventDefault()
+    var id  = $(this).attr('href'),
+      top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 700);
+  });
   // ----------------------------------------------header__address-hint------------------------------------------------
   $('.header__address').hover(function() {
     $('.header__address-hint').toggleClass('header__address-hint--hover');
@@ -57,12 +64,52 @@ $(function() {
     dots: true,
     arrows: false,
     fade: true,
+    infinite: false,
   });
   $('.set-slider__s').slick({
     asNavFor: '.set-slider__l',
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    infinite: false,
   });
+  // ----------------------------------------------reviews-slider------------------------------------------------
+  $('.reviews-slider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    infinite: false,
+    prevArrow: '<button class="slick-btn slick-prev"><div class="arrow-right"><span class="arrow-right__angle"></span></div></button>',
+    nextArrow: '<button class="slick-btn slick-next"><div class="arrow-right"><span class="arrow-right__angle"></span></div></button>',
+    responsive: [
+      {
+        breakpoint: 1061,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 821,
+        settings: {
+          slidesToShow: 2,
+          arrows: false,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 501,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          dots: true,
+        }
+      },
+    ]
+  });
+  // ----------------------------------------------footer__list-slide------------------------------------------------
+$('.footer__item-title-slide').on('click', function() {
+  $(this).next().slideToggle();
+  $(this).toggleClass('footer__item-title-slide--active');
+});
 
 });

@@ -72,6 +72,14 @@ $(function() {
     slidesToScroll: 1,
     arrows: false,
     infinite: false,
+    responsive: [
+      {
+        breakpoint: 661,
+        settings: {
+          dots: true,
+        }
+      },
+    ]
   });
   // ----------------------------------------------reviews-slider------------------------------------------------
   $('.reviews-slider').slick({

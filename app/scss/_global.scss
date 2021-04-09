@@ -58,32 +58,53 @@ body {
     transition: all .3s;
   }
 }
-// .up-wrap {
-//   // max-width: 1470px;
-//   position: fixed;
-//   left: 0;
-//   right: 0;
-//   z-index: 1;
-//   margin: 0 auto;
-// }
-// .up {
-//   // display: none;
-//   // background-color: #fff;
-//   // border-radius: 4px;
-//   // outline-color: rgba($body, .4);
-//   // margin-left: 30px;
-//   svg {
-//     opacity: 0.4;
-//   }
-//   svg:hover {
-//     opacity: .55;
-//   }
-// }
-
+.up-wrap {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1340px;
+  margin: 0 auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 45px;
+  z-index: 1;
+}
+.up {
+  display: none;
+  outline-color: rgba($body, .4);
+  transform: rotate(-90deg);
+  margin-right: -30px;
+  position: absolute;
+  bottom: 45px;
+  .arrow-right {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #BCBBBB;
+  }
+}
+// ---------------------------------------------------1400-----------------------------------------------------
+@media (max-width: 1400px) {
+  .up-wrap {
+    bottom: 10px;
+  }
+  .up {
+    margin-right: 0;
+    right: 5px;
+    bottom: 0;
+    .arrow-right {
+      width: 60px;
+      height: 60px;
+      border: 1px solid #BCBBBB;
+    }
+  }
+}
 // ---------------------------------------------------1360-----------------------------------------------------
 @media (max-width: 1360px) {
   .title {
     padding-bottom: 65px;
+  }
+  .up {
+    right: 18px;
   }
 }
 // ---------------------------------------------------1260-----------------------------------------------------
@@ -112,12 +133,37 @@ body {
   .title {
     padding-bottom: 22px;
   }
+  .up {
+    bottom: 0;
+    .arrow-right {
+      width: 52px;
+      height: 52px;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+// ---------------------------------------------------660-----------------------------------------------------
+@media (max-width: 660px) {
+  .up {
+    right: 3px;
+    .arrow-right {
+      width: 48px;
+      height: 48px;
+    }
+  }
 }
 // ---------------------------------------------------560-----------------------------------------------------
 @media (max-width: 560px) {
   .title {
     font-size: 30px;
     padding-bottom: 14px;
+  }
+  .up {
+    .arrow-right {
+      width: 44px;
+      height: 44px;
+    }
   }
 }
 // ---------------------------------------------------420-----------------------------------------------------

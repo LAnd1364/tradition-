@@ -90,7 +90,7 @@ body {
   .up {
     margin-right: 0;
     right: 5px;
-    bottom: 0;
+    bottom: 10px;
     .arrow-right {
       width: 60px;
       height: 60px;
@@ -134,19 +134,19 @@ body {
     padding-bottom: 22px;
   }
   .up {
-    bottom: 0;
+    bottom: 10px;
+    right: 25px;
     .arrow-right {
       width: 52px;
       height: 52px;
-      bottom: 0;
-      right: 0;
+      bottom: 0px;
+      right: 0px;
     }
   }
 }
 // ---------------------------------------------------660-----------------------------------------------------
 @media (max-width: 660px) {
   .up {
-    right: 3px;
     .arrow-right {
       width: 48px;
       height: 48px;

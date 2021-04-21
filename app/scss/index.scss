@@ -12,6 +12,16 @@
 @import '../module/_blog/_blog';
 @import '../module/_footer/_footer';
 
+.header {
+  margin-top: 33px;
+  &__inner {
+    border: $border;
+    border-bottom: none;
+  }
+  &__line {
+    display: none;
+  }
+}
 .invite {
   max-width: 1440px;
   height: 678px;
@@ -171,8 +181,17 @@
     border-right: $border;
   }
 }
+// ---------------------------------------------------1410-----------------------------------------------------
+@media (max-width: 1410px) {
+  .header {
+    margin-top: 23px;
+  }
+}
 // ---------------------------------------------------1360-----------------------------------------------------
 @media (max-width: 1360px) {
+  .header {
+    margin-top: 15px;
+  }
   .invite {
     height: 650px;
     background-position: 50%;
@@ -377,6 +396,12 @@
 }
 // ---------------------------------------------------760-----------------------------------------------------
 @media (max-width: 760px) {
+  .header {
+    margin-top: 0;
+    &__inner {
+      border: none;
+    }
+  }
   .invite {
     height: 330px;
     &__inner {

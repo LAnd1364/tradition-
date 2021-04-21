@@ -1,0 +1,96 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+@import 'media';
+@import '../module/_header/_header';
+@import '../module/_breadcrumbs/_breadcrumbs';
+@import '../module/_footer/_footer';
+
+.ceremony {
+  &__top {
+    max-width: 1440px;
+    background-image: url(../images/ceremony-top-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+  }
+  &__title {
+    padding: 115px 0;
+  }
+  &__inner {
+    padding: 60px 40px 100px;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    line-height: 1.35;
+  }
+  &__about {
+    max-width: 386px;
+    @extend %OpenSans-400;
+    p:first-child {
+      margin-bottom: 30px;
+    }
+    span {
+      display: block;
+      @extend %OpenSans-600;
+      margin-top: 8px;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    max-width: 332px;
+    @extend %OpenSans-600;
+    span {
+      display: block;
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+      &:last-child {
+        margin-top: auto;
+      }
+    }
+  }
+  &__date {
+    max-width: 232px;
+    @extend %OpenSans-400;
+    span {
+      display: block;
+      margin-bottom: 25px;
+    }
+  }
+  &__link {
+    display: block;
+    @extend %OpenSans-400;
+    max-width: 232px;
+    width: 100%;
+    margin-left: auto;
+    position: relative;
+    &:hover::before {
+      background-color: $body;
+    }
+    &::after {
+      content: '';
+      width: 12px;
+      height: 8px;
+      background-image: url(../images/icons/arrow-right.svg);
+      position: absolute;
+      top: 6px;
+      left: 47px;
+    }
+    &::before {
+      content: '';
+      width: 62px;
+      height: 1px;
+      background-color: transparent;
+      position: absolute;
+      left: -2px;
+      bottom: 1px;
+      transition: all .3s;
+    }
+  }
+}

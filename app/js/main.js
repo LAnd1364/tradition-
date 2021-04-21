@@ -26,6 +26,16 @@ $(window).on("scroll", function () {
 
 $(function() {
 
+  // ----------------------------------------------up------------------------------------------------
+  var mybutton = document.getElementById("up");
+  window.onscroll = function() {scrollFunction()};
+  function scrollFunction() {
+    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
   // ----------------------------------------------menu__btn------------------------------------------------
   $('.menu__btn, .menu__item-link').on('click', function() {
     $('.menu__list').toggleClass('menu__list--active');
@@ -47,7 +57,7 @@ $(function() {
     $('.invite__content').toggleClass('invite__content--hover');
   }); 
   // ----------------------------------------------product__btn------------------------------------------------
-  $('.product__btn').on('click', function() {
+  $(document).on('click', '.product__btn', function() {
     $(this).toggleClass('product__btn--added');
   }); 
   // ----------------------------------------------product-slider------------------------------------------------
@@ -144,6 +154,11 @@ $(function() {
 $('.footer__item-title-slide').on('click', function() {
   $(this).next().slideToggle();
   $(this).toggleClass('footer__item-title-slide--active');
+});
+  // ----------------------------------------------page-404------------------------------------------------
+$('.page-404__link-box').hover(function() {
+  $('.page-404__link-box').toggleClass('page-404__link-box--hover');
+  $('.arrow-right').toggleClass('arrow-right--hover');
 });
 
 });

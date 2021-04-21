@@ -22,5 +22,8 @@
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.5.1",
     "slick-carousel": "^1.8.1"
+  },
+  "dependencies": {
+    "hammerjs": "^2.0.8"
   }
 }

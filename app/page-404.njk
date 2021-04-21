@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Tradition</title>
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <link rel="stylesheet" href="css/page-404.min.css">
+</head>
+<body>
+   
+   {% include "app/module/_header/_header.njk" %}
+      
+   <main class="main">
+
+      <div class="page-404">
+         <div class="container">
+            <div class="page-404__inner">
+               <div class="page-404__content">
+                  <h1 class="page-404__title">404</h1>
+                  <p class="page-404__text">
+                     sorry, this page are you looking for cannot be found. Let us get you back on track
+                  </p>
+               </div>
+               <a class="page-404__link-box" href="index.html">
+                  <span class="page-404__link-text">Back to home</span>
+                  {% include "app/module/_arrow-right/_arrow-right.njk" %}
+               </a>
+            </div>
+         </div>
+      </div>
+      
+   </main>
+
+   {% include "app/module/_footer/_footer.njk" %}
+
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script src="js/main.min.js"></script>
+</body>
+</html>

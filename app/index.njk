@@ -10,11 +10,7 @@
 <body>
    
    {% include "app/module/_header/_header.njk" %}
-      <div class="up-wrap">
-         <button class="up" id="up" onclick='window.scrollTo({top: 0, behavior: "smooth"});'>
-            {% include "app/module/_arrow-right/_arrow-right.njk" %}
-         </button>
-      </div>
+   {% include "app/module/_up/_up.njk" %}
       
    <main class="main">
 
@@ -29,7 +25,7 @@
                   <p class="invite__text--adapt">PLAN YOUR VISIT TO A
                      <span>Tea ceremony master class</span>
                   </p>
-                  <a class="invite__link" href="#">
+                  <a class="invite__link" href="ceremony.html">
                      {% include "app/module/_arrow-right/_arrow-right.njk" %}
                   </a>
                </div>
@@ -110,7 +106,7 @@
                      </a>
                   </div>
                </div>
-               <a class="more-link" href="#">View more</a>
+               <a class="more-link" href="page-404.html">View more</a>
             </div>
          </div>
       </section>
@@ -125,18 +121,6 @@
 
    {% include "app/module/_footer/_footer.njk" %}
 
-   <script>
-      var mybutton = document.getElementById("up");
-      window.onscroll = function() {scrollFunction()};
-   
-      function scrollFunction() {
-        if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-   </script>
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
    <script src="js/main.min.js"></script>
 </body>

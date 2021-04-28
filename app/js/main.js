@@ -41,8 +41,8 @@ $(function() {
     $('.menu__list').toggleClass('menu__list--active');
     $('.menu__btn-line').toggleClass('menu__btn-line--active');
   });
-  // ----------------------------------------------menu__btn------------------------------------------------
-  $('.menu__item-link, .logo').on('click', function(e) {
+  // ----------------------------------------------menu__item-link------------------------------------------------
+  $('.menu__item-link--main, .logo--main, .menu__item-link--contacts').on('click', function(e) {
     e.preventDefault()
     var id  = $(this).attr('href'),
       top = $(id).offset().top;
